@@ -1643,7 +1643,7 @@ GameObject:
   - component: {fileID: 1453385799}
   - component: {fileID: 1453385798}
   m_Layer: 5
-  m_Name: btnStart
+  m_Name: btnRestart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1665,8 +1665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -85, y: -120}
-  m_SizeDelta: {x: 186, y: 96}
+  m_AnchoredPosition: {x: -111.9, y: -120}
+  m_SizeDelta: {x: 224, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1453385798
 MonoBehaviour:
@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: db0e896bf437a6c4093d1c61634dbe43, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1bf994e3a52e014f8683615c075e3d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

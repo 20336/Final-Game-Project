@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextMaze : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class NextMaze : MonoBehaviour
 
         if (other.transform.tag == "EndSmiley2")
         {
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
     }
     IEnumerator TeleportNextMaze()
