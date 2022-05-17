@@ -35,7 +35,7 @@ public class NextMaze : MonoBehaviour
 
         if (other.transform.tag == "EndSmiley2")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            StartCoroutine("EndOfMaze");
         }
     }
     IEnumerator TeleportNextMaze()
@@ -45,5 +45,14 @@ public class NextMaze : MonoBehaviour
         gameObject.transform.position = new Vector3(-65f, 50f, 45f);
         yield return new WaitForSeconds(1f);
         playerController.enabled = true;
+    }
+
+    IEnumerator EndOfMaze()
+    {
+        playerController.enabled = false;
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

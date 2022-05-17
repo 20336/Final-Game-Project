@@ -8,26 +8,26 @@ using UnityEngine.SceneManagement;
 public class Collect : MonoBehaviour
 {
     [SerializeField]
-    private Canvas ratCollectingScreen;
+    private Canvas RatCollectingScreen;
     [SerializeField]
-    private TextMeshProUGUI displayedScore;
+    private TextMeshProUGUI DisplayedScore;
     [SerializeField]
-    private TextMeshProUGUI finishMaze;
+    private TextMeshProUGUI FinishMaze;
     [SerializeField]
-    private GameObject notRat;
+    private GameObject NotRat;
     public int score;
     public int ratsCollected;
 
     // Start is called before the first frame update
     void Start()
     {
-        ratCollectingScreen.GetComponent<Canvas>().enabled = false;
+        RatCollectingScreen.GetComponent<Canvas>().enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        displayedScore.text = "Rats: " + ratsCollected.ToString();
+        DisplayedScore.text = "Rats: " + ratsCollected.ToString();
         AllRatsCollected();
     }
 
@@ -35,7 +35,7 @@ public class Collect : MonoBehaviour
     {
         if (ratsCollected >= 36)
         {
-            finishMaze.text = "You've Collected all the rats!\nNow find the end of the maze!";
+            FinishMaze.text = "You've Collected all the rats!\nNow find the end of the maze!";
         }
     }
 
@@ -45,14 +45,14 @@ public class Collect : MonoBehaviour
 
         if (other.transform.tag == "Rat")
         {
-            ratCollectingScreen.GetComponent<Canvas>().enabled = true;
+            RatCollectingScreen.GetComponent<Canvas>().enabled = true;
             other.gameObject.SetActive(false);
             ratsCollected++;
         }
-        else if (other.transform == notRat.transform)
+        else if (other.transform == NotRat.transform)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            notRat.gameObject.SetActive(false);
+            NotRat.gameObject.SetActive(false);
             ratsCollected = 0;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
