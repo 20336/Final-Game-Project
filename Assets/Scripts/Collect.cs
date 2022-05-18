@@ -15,13 +15,21 @@ public class Collect : MonoBehaviour
     private TextMeshProUGUI FinishMaze;
     [SerializeField]
     private GameObject NotRat;
+    [SerializeField]
+    private AudioSource collectAudio;
+    [SerializeField]
+    private AudioSource notRatAudio;
     public int score;
-    public int ratsCollected;
+    public static int ratsCollected;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         RatCollectingScreen.GetComponent<Canvas>().enabled = false;
+        collectAudio = GetComponent<AudioSource>();
+        notRatAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,12 +56,14 @@ public class Collect : MonoBehaviour
             RatCollectingScreen.GetComponent<Canvas>().enabled = true;
             other.gameObject.SetActive(false);
             ratsCollected++;
+            collectAudio.Play();
         }
         else if (other.transform == NotRat.transform)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             NotRat.gameObject.SetActive(false);
             ratsCollected = 0;
+            notRatAudio.Play();
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
