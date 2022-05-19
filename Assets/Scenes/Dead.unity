@@ -276,8 +276,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: 0.4245283, g: 0.16220185, b: 0.16220185, a: 1}
+    m_HighlightedColor: {r: 0, g: 0, b: 0.49803922, a: 1}
+    m_PressedColor: {r: 0, g: 0, b: 0.49803922, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_ColorMultiplier: 1
@@ -299,8 +299,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1347788246}
-        m_TargetAssemblyTypeName: PopUpMenu, Assembly-CSharp
-        m_MethodName: MazeStart
+        m_TargetAssemblyTypeName: DeadPopup, Assembly-CSharp
+        m_MethodName: EndScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 819250825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 423032782726337499656dcc38ce857f, type: 3}
+  m_Script: {fileID: 11500000, guid: bd949c55a50b60846b9e4350dc63d9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &819250828
@@ -572,8 +572,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0, g: 0, b: 0.49803922, a: 1}
+    m_PressedColor: {r: 0, g: 0, b: 0.49803922, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_ColorMultiplier: 1
@@ -595,7 +595,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1347788246}
-        m_TargetAssemblyTypeName: PopUpMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: DeadPopup, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1347788244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 582d15eef38471145b73c0d48fdd58c0, type: 3}
+  m_Script: {fileID: 11500000, guid: bd949c55a50b60846b9e4350dc63d9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1486150420

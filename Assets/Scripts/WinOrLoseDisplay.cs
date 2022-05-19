@@ -15,8 +15,7 @@ public class WinOrLoseDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        WinAudio = GetComponent<AudioSource>();
-        LoseAudio = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -35,6 +34,7 @@ public class WinOrLoseDisplay : MonoBehaviour
         }
         else
         {
+
             WinAudio.Play();
         }
     }

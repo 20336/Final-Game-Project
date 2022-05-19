@@ -28,8 +28,6 @@ public class Collect : MonoBehaviour
     void Start()
     {
         RatCollectingScreen.GetComponent<Canvas>().enabled = false;
-        collectAudio = GetComponent<AudioSource>();
-        notRatAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
